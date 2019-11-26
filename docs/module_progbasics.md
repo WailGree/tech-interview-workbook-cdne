@@ -101,8 +101,9 @@ print(sort_method([223,4,1,2,3,212331,2351,1]))
 #### What is the call stack?
 
 #### What is “Stack overflow”?
+Is the biggest community for developers where you can find answers and questions of problems that other developers encountered.
 #### What are the main parts of a function?
-
+Python keyword `def` function_name, in some cases arguments and function body.
 ### Programming languages - Python  
 #### How do you use a dictionary in Python?
 
@@ -292,7 +293,7 @@ Is a guideline that every developer should follow, basically clean code is easy 
 2. Make a summary of the purpose of the code in one sentence.
 3. Run code to see what is the result.
 4. Refactor it:
-```
+
     1. Remove code that doesn't add value
         - delete long comments
         - format the code
@@ -303,7 +304,7 @@ Is a guideline that every developer should follow, basically clean code is easy 
     3. Remove duplicate code
         - make functions with code
 
-```
+
 
 ### Error handling
 
@@ -358,12 +359,24 @@ Using `sudo apt-get install`
 #### How do you navigate in the filesystem with the command line?
 Linux provides a comamnd cd - change directory. We will use cd in terminal to access folders in filesystem.
 #### What does the following commands do: mkdir, rm, cat, cp, touch?
-`mkdir 'name of the foldeer'` - creates a directory with 'name of the folder` name<br>
+`mkdir 'name of the folder'` - creates a directory with 'name of the folder` name
+
 `rm file.txt` - removes file
+
 `cat file.txt` - displays contents of text files
+
 `cp` - copies file to another location
+
 `touch <file_name>` - creates a file 
 #### How can you look up what does a command do in Linux if you have no internet connection?
 command --help
 #### What does the following commands do: head, tail, more, less?
+`head` - shows first 10 lines in file
+
+`tail` - shows last 10 lines in file
+
+`less` - read content of file one screen per time
+
+`more` - same command but not with so many options as `less`
 #### How do you download a file from internet using the terminal?
+We can use `wget link_to_file` 
