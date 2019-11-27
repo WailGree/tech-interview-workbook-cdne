@@ -165,9 +165,9 @@ We will get and error 'index out of range'.
 
 #### What is the "golden rule" of variable scoping in Python (context: LEGB)? What is the lifetime of variables?
 #### If you need to access the iterator variable after a for loop, how would you do it in Python?
+You simply call the iterator variable because the variable value is the last element in iterable data type.
 #### What type of elements can a list contain in Python?
-
-You can store any type of data in Python.
+You can store any type of data in list because lists accepts any object.
 
 #### What is slice operator in Python and how to use?
 
