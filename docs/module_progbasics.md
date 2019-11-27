@@ -204,10 +204,10 @@ Introduced in Python 3 is used to print formated strings. Using f before string 
 Strings, lists, tuples, dictionaries.
 
 #### What is the difference between list/set/dictionary comprehension and a generator expression in Python?
-
-
+The difference between comprehension and generator expression is that comprehension returns a list and itterates over each element storing list in memory, compared to generator that yiels one item at a time.
 
 #### Does the order of the function definitions matter in Python? Why?
+It doesn't matter in what order do you declare a function, what matters is when you call it. Mainly because the functions are already declared
 #### What does unpacking mean in Python?
 
 We can assign different values from an itterable type to variables<br>
