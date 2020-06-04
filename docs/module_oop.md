@@ -47,18 +47,39 @@ Data hiding is related to access modifiers. Using modifiers to hide data uses an
 #### Can a static method use non-static members?
 Yes it can use non-static members, but it needs to create an object to access those members.
 #### What is the difference between hiding a static method and overriding an instance method?
-
+Hiding a static method or any method uses the OOPs principle of Encapsulation compared to overriding a instance method that uses OOPs principle of Polymorphism.
 #### Define the following terms: Instantiation, Attribute, Method
+Instantiation = the process of creating a new object
+Attribute = is another word for field. An object can have multiple attributes of different types, suchs as int, float, boolean, String and so on.
+Method = is a block of code that runs when is called. In a method is where logic and algorithms are executed.
 #### Could we access a static variable (or method) from a non-static method? Why?
+If we are in the same class, yes. Mainly because that variable/method belongs to the class. IF we are in a different class, only the class can access the static members.
 #### Could we access a non-static variable (or method) from a static method? Why?
+No because that variable belongs to an instance. We need to create an object to use those fields and methods.
 #### How many instances you have of a static variable of a given class?
+Only one.
 #### Why is it not a good practice to write a lot of static methods?
+Static methods don't fully support OOP design.
 #### What are the features of static attributes and static methods of a class? What are the benefits, when to use them?
 #### What is the ‘this’ reference?
+Using 'this' keyword you refference the object of the current class.
 #### What are base class, subclass and superclass?
+When we use Inheritance a subclass extends superclass. This means the subclass has all properties of a superclass, such as methods, fields, inner classes or block of codes.
+A base class is a class the will be extended, and is only used as a base for all classes to receive those properties.
 #### Draw an object oriented family (as entities, with relations) on the whiteboard.
+
 #### Difference between overloading and overriding?
+Overriding = when a methods in subclass are the same in superclass we call that overriding. The method in subclass overrides the method logic by providing different code.
+Overloading - We can achieve overloading only when a method has the same name and different paramaters. There are several ways to overload a method:
+- multiple parameters
+- different parameters type
+- different paramters order
 #### What are the Object Oriented Principles? Explain the concepts with realistic examples!
+Inheritance - 
+Polymorphism -
+Encapsulation - 
+Abstraction - 
+
 #### What is method overloading?
 #### What is method overriding?
 #### Explain how object oriented languages attempt to simplify memory management for Programmers.
