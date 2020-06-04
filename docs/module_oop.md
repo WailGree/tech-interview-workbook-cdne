@@ -31,14 +31,23 @@
 ### Object-oriented
 
 #### What is a class?
+A class is a blueprint to create an object.
 #### What is an object?
+An object is an instance of a class, each object has its own set of properties.
 #### What is a constructor?
+Constructors are special methods in Java that have the same name as the class. Everytime we create an object a default constructor is created.
 #### Do we require parameter for constructors?
+We can create constructors with or without parameters. The default constructor doesn't have any parameters, so no is not required to use parameters for constructors.
 #### What is an interface?
+An interface is a just a class, the difference is that it has only method signatures, so no code written in the method body. The purpose of an interface is to be implemented by classes. When a class implements a interface, it needs to implement all methods in the interface.
 #### What are access modifiers?
+Access modifiers are a feature in Java that limit the visibility of a class to another class members. In Java there are 4 access modifiers: public, private, protected and default.
 #### What is data hiding?
+Data hiding is related to access modifiers. Using modifiers to hide data uses an OOP feature called Encapsulation.
 #### Can a static method use non-static members?
+Yes it can use non-static members, but it needs to create an object to access those members.
 #### What is the difference between hiding a static method and overriding an instance method?
+
 #### Define the following terms: Instantiation, Attribute, Method
 #### Could we access a static variable (or method) from a non-static method? Why?
 #### Could we access a non-static variable (or method) from a static method? Why?
