@@ -5,7 +5,7 @@
 ### Error handling
 
 #### What does 'fail fast' mean in terms of exception handling? Why is it a good practice?
-
+The fail fast principle stands for stopping the current operation as soon as any unexpected error occurs. Adhering to this principle generally results in a more stable solution.
 ## Computer Science
 
 ### Data structures
@@ -15,18 +15,21 @@
 #### What is a linked list? How to find if a linked list has a loop?
 #### What is the Big O time complexity of the common operations in an ArrayList, LinkedList, HashMap? And of a bubble sort, quicksort, finding items in a Binary Search tree?
 #### How does HashMap work?
+HashMap in Java works on hashing principle. It is a data structure which allows us to store object and retrieve it in constant time O(1) provided we know the key.
 #### Why is it important for keys in a map to have an immutable type? (Consider String for example.)
-
+If jey are immutable, the object's hashcode wont change and it allows caching the hashcode of different keys which makes the overall retrieval process very fast.
 ### Other
 
 #### What is a garbage collector, in a nutshell?
-
+Java applications obtain objects in memory as needed. It is the task of garbage collection (GC) in the Java virtual machine (JVM) to automatically determine what memory is no longer being used by a Java application and to recycle this memory for other uses.
 ## Programming paradigms
 
 ### Procedural
 
 #### What is casting? What is the difference between up vs downcasting?
+Up-casting is casting to a supertype, while downcasting is casting to a subtype. Upcasting and downcasting gives us advantages, like Polymorphism or grouping of different objects. We can treat an object of a child class type to be as an object of its parent class type. This is called upcasting.
 #### Which order should we catch the exceptions? Why?
+Any order the compiler will accept is correct.
 
 ### Object-oriented
 
@@ -155,22 +158,39 @@ you will get ConcurrentModificationException exception.
 ArrayIndexOutOfBoundsException
 #### If you need to access the iterator variable after a for loop, how would you do it?
 #### Which interfaces extend the Collection interface in Java. Which classes?
+List, Queue, Set
 #### What is the connection between equals() and hashCode()? How are they used in HashMap?
+1) If two objects are equal, then they must have the same hash code. 
+2) If two objects have the same hash code, they may or may not be equal. 
 #### What is the difference between checked exceptions and unchecked exceptions? Could you bring example for each?
+Checked exception are the exceptions that happen whe you compile a program and uncheked at runtime.
+Checked exception - ClassNotFoundException
+Unchked exception - ArithmeticException
 #### What is Error in Java and how does it relate to Exception?
+Both Exception and Error classes are inherited from Throwable class.
 #### When does 'finally' block run? What it is used for? Could you give an example from your projects when you would use 'finally'?
+You can use finnaly to run code in both situation ( exception or no exception).
+For example in a connection to a database you want to close the exception if the querry was executed or there is an exception.
 #### What is the largest number you can work with in Java?
 #### When you use method overriding, can you change the access level of the method, from protected to public? Why?When you use method overriding, can you change the access level of the method, from public to protected? Why?
+On overriding no because it needs to be the same access level to the one in superclass.
 #### Can the main method be overridden? Explain your answer!
+In short, main method can be overloaded but cannot be overridden in Java simply because its a static method.
 #### When you use method overriding, can you throw fewer exceptions in the subclass than in the parent class? Why?
 #### When you use method overriding, can you throw more exceptions in the subclass than in the parent class? Why?
 #### What does "final" mean in case of a variable, method or a class?
+In variable using final, you create a constant
+For methods, prevent method overriding.
+For classes, prevent inheritance.
 #### What is the super keyword?
+super is used to call superclass constructor and members if they are the same in subclass.
 #### What are “generics”? When to use? Show examples.
+ava Generic methods and generic classes enable programmers to specify, with a single method declaration, a set of related methods, or with a single class declaration, a set of related types.
 #### What is the benefit of having “generic” containers?
+Generics add stability to your code by making more of your bugs detectable at compile time.
 #### Given two Java programs on two different machines. How can you communicate between the two? What are the possible ways?
 #### What is an annotation? What can be annotated and how? Show examples.
-
+Annotations help to associate metadata (information) to the program elements i.e. instance variables, constructors, methods, classes, etc.
 ### C&#35;
 
 #### Explain the purpose of IL and how does it relate to CLR?
@@ -222,4 +242,6 @@ ArrayIndexOutOfBoundsException
 ### Database
 
 #### How can you connect your application to a database server? What are the possible ways?
+You can use JDBC whichs is a standard to connect to a database and execute querry or JPA which is a more advanced way to connect to database and use ORM. 
 #### What do you know about database normalization?
+Normalization is the process of organizing data in a database.
