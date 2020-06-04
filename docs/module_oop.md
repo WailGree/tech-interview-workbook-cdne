@@ -81,41 +81,78 @@ Encapsulation -
 Abstraction - 
 
 #### What is method overloading?
+When a method has different parameters but same method signature is called method overloading.
 #### What is method overriding?
+When you have same method signature in subclass and superclass is called method overriding. You can override the initial implmenetation in subclass.
 #### Explain how object oriented languages attempt to simplify memory management for Programmers.
-#### Explain the “Single Responsibility” principle!
-#### What is an object oriented program? Explain, show.
-#### How do you make a class immutable? What do you need to watch out for?
-#### How many instances can be created for an abstract class?
 
+#### Explain the “Single Responsibility” principle!
+The single-responsibility principle (SRP) is a computer-programming principle that states that every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class, module or function.
+#### What is an object oriented program? Explain, show.
+An object oriented program is a programming paradigm that is based on the concept of objects. Each object has its own set of properties.
+#### How do you make a class immutable? What do you need to watch out for?
+You can make a class immutable in few ways:
+1. Declare class final
+2. Declare class members final
+3. Create getter methods and no set method.
+
+#### How many instances can be created for an abstract class?
+You can't create a an instance from an asbtract class.
 ## Programming languages
 
 ### Java
 
 #### What is autoboxing and unboxing?
+Autoboxing and Unboxing. Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes
 #### If you have a variable, that shall store a positive whole number between 0 and 200, what primitive type would you use to store it?
+Use a unsigned integer.
 #### What is the "golden rule" of variable scoping in Java? What is the lifetime of variables?
+A variable is available only in the scope it was defined (curly brackets). 
 #### What is the purpose of the ‘equals()’ method?
+.equals() evaluates to the comparison of values in the objects.
 #### What is the difference between '==' and 'equals()'?
+== checks if both objects point to the same memory location whereas .equals() evaluates to the comparison of values in the objects.
 #### What does the ‘static’ keyword mean?
+Method or field defined static is only available at class level.
 #### Why is the main() method declared as static? Explain.
+Java main() method is always static, so that compiler can call it without the creation of an object or before the creation of an object of the class
 #### What is the default access modifier in a class?
+In java the default access modifier is the one with no access modifier.
 #### What is the JVM?
+A Java virtual machine (JVM) is a virtual machine that enables a computer to run Java programs as well as programs written in other languages that are also compiled to Java bytecode. 
 #### What is the difference between the JRE and the JDK?
+JDK is a software development kit whereas JRE is a software bundle that allows Java program to run
 #### What is the difference between long and Long?
+long is an primitive type and Long is a class.
 #### Can a long store bigger numbers than a Long?
+No.
 #### What kind of packages do you know under java.util.* ? Bring at least 3 examples.
+java.util.ArrayList;
+java.util.Collections;
+java.util.List;
 #### What are the access modifiers in Java? Which one could we use for class?
+public, private, protected and default. For class we can use public and default.
 #### Can an “enum” contain methods in Java? Explain.
+Enum can contain constructors, methods, fields.
 #### When would you use a private/protected/public attribute? What is the difference?
+Private is used when you want to limit access only insde the class, protected inside the class but can be accessed if that class is inherited.
+Using public you can access the class from anywhere.
 #### How do you prevent developers from subclassing a class?
+Create a private constructor, make the class final.
 #### How do you prevent developers from overriding a method in a subclass?
+Use the final keyword.
 #### How do you prevent developers from changing the value of a variable?
+Make the variable static final.
 #### Think about money ;) How would you store a currency value, that shall support decimal parts? Think it through again, and try to think outside of the box!
+Use Currency class.
 #### What happens if you try to call something, that you have no access to, because of data hiding?
+You get an error that Java compiler can't find that member.
 #### What happens if you try to delete/drop an item from an array, while you are iterating over it?
+You will get IndexOutofbounds exception.
 #### What happens if you try to delete/drop/add an item from a List, while you are iterating over it?
+you will get ConcurrentModificationException exception.
 #### What happens if you try to add an item to the end of an array, while you are iterating over it?
+ArrayIndexOutOfBoundsException
 #### If you need to access the iterator variable after a for loop, how would you do it?
 #### Which interfaces extend the Collection interface in Java. Which classes?
 #### What is the connection between equals() and hashCode()? How are they used in HashMap?
