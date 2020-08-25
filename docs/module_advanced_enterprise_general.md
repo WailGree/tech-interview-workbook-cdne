@@ -120,25 +120,78 @@ It is a best practice to author your tests in more natural and convenient way. T
 
 ### DevOps
 #### What is continuous integration? Why is CI important?
+Continuous integration (CI) is the practice of automating the integration of code changes from multiple contributors into a single software project. The CI process is comprised of automatic tools that assert the new code’s correctness before integration
+
+CI is an asset to a software producing organization. CI benefits are not limited to the engineering team but greatly benefit the overall organization. CI enables better transparency and insight into the process of software development and delivery. These benefits enable the rest of the organization to better plan and execute go to market strategies.
+
 #### Why are tests important in the CI workflow?
+If you test and deploy code more frequently, it will eventually reduce the risk level of the project you are working on as you can detect bugs and code defects earlier. This means they are easier to fix and you can fix them sooner which makes it cheaper to fix them.
+
 #### Name some software that help the CI workflow!
+-	Jenkins
+-	Travis
+-	Circle CI
+-	Gitlab CI
+
 #### What is Continuous Delivery?
+Continuous Delivery is the ability to get changes of all types—including new features, configuration changes, bug fixes and experiments—into production, or into the hands of users, safely and quickly in a sustainable way.
+
 #### What is Continuous Deployment?
+Continuous Deployment (CD) is a software release process that uses automated testing to validate if changes to a codebase are correct and stable for immediate autonomous deployment to a production environment.
+
 #### What is DevOps?
+DevOps is a set of practices that works to automate and integrate the processes between software development and IT teams, so they can build, test, and release software faster and more reliably. The term DevOps was formed by combining the words “development” and “operations” and signifies a cultural shift that bridges the gap between development and operation teams, which historically functioned in siloes. 
 
 ### Software Methodologies
 #### What kind of software-lifecycle models do you know?
+-	Agile development
+-	Waterfall Model
+
 #### What is a UML diagram? What kind of diagram types do you know?
+A UML diagram is a diagram based on the UML (Unified Modeling Language) with the purpose of visually representing a system along with its main actors, roles, actions, artifacts or classes, in order to better understand, alter, maintain, or document information about the system.
+
+-	Class diagram
+-	Package diagram
+
 #### What is a UML class diagram? What are the typical elements?
+The UML Class diagram is a graphical notation used to construct and visualize object oriented systems. A class diagram in the Unified Modeling Language (UML) is a type of static structure diagram that describes the structure of a system by showing the system's:
+
+- classes, 
+- their attributes, 
+- operations (or methods), 
+- and the relationships among objects.
+
+
 #### What kind of design patterns do you know? Bring at least 3 examples.
+-	Singleton pattern
+-	Abstract Factory
+-	Factory method
+- DAO
+
 #### What is the purpose of the Iterator Pattern?
+Iterator is a behavioral design pattern that allows sequential traversal through a complex data structure without exposing its internal details.
+
 #### What do you know about the SOLID principles?
+S.O.L.I.D is an acronym that represents five principles of object-oriented programming.
+
+[S]ingle Responsibility Principle 
+[O]pen/Closed Principle 
+[L]iskov Substitution Principle 
+[I]nterface Segregation Principle
+[D]ependency Inversion Principle
+
+
 #### How would you separate data storage code and business logic code (which uses stored data) in an application?
+Using DAO pattern. 
 
 ## Computer science
 
 ### Data Structures
 #### What is the difference between Stack and Queue data structure?
+Stack A stack is a linear data structure in which elements can be inserted and deleted only from one side of the list, called the top. A stack follows the LIFO (Last In First Out) principle, i.e., the element inserted at the last is the first element to come out.
+
+Queue: A queue is a linear data structure in which elements can be inserted only from one side of the list called rear, and the elements can be deleted only from the other side called the front. The queue data structure follows the FIFO (First In First Out) principle, i.e. the element inserted at first in the list, is the first element to be removed from the list
+
 #### What is a graph? What are simple graphs? What are directed graphs? What are weighted graphs?
 #### What are trees? What are binary trees? What are binary search trees?
 #### How can you store graphs in programs? What are the advantages/disadvantages per each?
