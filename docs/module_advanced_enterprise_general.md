@@ -193,31 +193,128 @@ Stack A stack is a linear data structure in which elements can be inserted and d
 Queue: A queue is a linear data structure in which elements can be inserted only from one side of the list called rear, and the elements can be deleted only from the other side called the front. The queue data structure follows the FIFO (First In First Out) principle, i.e. the element inserted at first in the list, is the first element to be removed from the list
 
 #### What is a graph? What are simple graphs? What are directed graphs? What are weighted graphs?
+Graphs are a powerful and versatile data structure that easily allow you to represent real life relationships between different types of data (nodes). There are two main parts of a graph:
+
+-	The vertices (nodes) where the data is stored 
+-	The edges (connections) which connect the nodes
+A graph with no loops and no parallel edges is called a simple graph.
+
+A directed graph is graph, i.e., a set of objects (called vertices or nodes) that are connected together, where all the edges are directed from one vertex to another. A directed graph is sometimes called a digraph or a directed network. In contrast, a graph where the edges are bidirectional is called an undirected graph.
+
+A weighted graph is a graph in which each branch is given a numerical weight. A weighted graph is therefore a special type of labeled graph in which the labels are numbers (which are usually taken to be positive).
+
 #### What are trees? What are binary trees? What are binary search trees?
+A tree represents the nodes connected by edges.
+
+Binary Tree is a special data structure used for data storage purposes. A binary tree has a special condition that each node can have a maximum of two children. A binary tree has the benefits of both an ordered array and a linked list as search is as quick as in a sorted array and insertion or deletion operation are as fast as in linked list.
+
+Binary Search Tree is a node-based binary tree data structure which has the following properties:
+
+-	The left subtree of a node contains only nodes with keys lesser than the node’s key.
+-	The right subtree of a node contains only nodes with keys greater than the node’s key.
+-	The left and right subtree each must also be a binary search tree.
+
+
 #### How can you store graphs in programs? What are the advantages/disadvantages per each?
+You can store a graph using:
+
+-	Nodes as objects with pointers to one another
+-	A matrix of edge weights
+
+Nodes as objects with pointers to one another
+
+-	The memory complexity for this approach is O(n) because you have as many objects as you have nodes. The number of pointers (to nodes) required is up to O(n^2) as each node object may contain pointers for up to n nodes. 
+-	The time complexity for this data structure is O(n) for accessing any given node.
+
+Storing a matrix of edge weights
+
+-	This would be a memory complexity of O(n^2) for the matrix.
+-	The advantage with this data structure is that the time complexity to access any given node is O(1).
+
+
 #### What are graph traversal algorithms? What is BFS, how does it work? What is DFS, how does it work?
+Graph traversal algorithms are used to visit nodes in graph.
+
+The Breadth First Search (BFS) traversal is an algorithm, which is used to visit all of the nodes of a given graph. In this traversal algorithm one node is selected and then all of the adjacent nodes are visited one by one. After completing all of the adjacent vertices, it moves further to check another vertices and checks its adjacent vertices again.
+
+The Depth First Search (DFS) is a graph traversal algorithm. In this algorithm one starting vertex is given, and when an adjacent vertex is found, it moves to that adjacent vertex first and try to traverse in the same manner.
+
 #### How does dictionary work?
+Dictionary is a collection that stores key-value pairs in no particular order.
+
 #### Why is it important for keys in a hashmap to have an immutable type? (Consider string for example.)
+If immutable, the object's hash code won’t change and it allows caching the hash code of different keys which makes the overall retrieval process very fast. 
 
 ### Algorithms
 #### What is QuickSort? Describe the main logic of this sorting algorithm.
+QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot
+Technically, quick sort follows the below steps:
+
+Step 1 − Make any element as pivot
+Step 2 − Partition the array on the basis of pivot
+Step 3 − Apply quick sort on left partition recursively
+Step 4 − Apply quick sort on right partition recursively
+
 
 ## Software design
 
 ### Security
 
 #### What is OAuth2?
+To begin at a high level, OAuth is not an API or a service: it’s an open standard for authorization and anyone can implement it
+
+More specifically, OAuth is a standard that apps can use to provide client applications with “secure delegated access”. OAuth works over HTTPS and authorizes devices, APIs, servers, and applications with access tokens rather than credentials.
+
 #### What is Basic Authentication?
+Basic authentication is a simple authentication scheme built into the HTTP protocol. The client sends HTTP requests with the Authorization header that contains the word Basic word followed by a space and a base64-encoded string username:password. For example, to authorize as demo / p@55w0rd the client would send
+
 #### What is CORS, why it’s needed in browsers?
+Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin. A web application executes a cross-origin HTTP request when it requests a resource that has a different origin (domain, protocol, or port) from its own.
+
 #### How can you initialize a CSRF attack?
+A CSRF attack can be initialized using a GET or POST request and can make use of an Iframe with attributes that make it invisible.
+
 #### What is JWT used for? Where to store it on client side?
+JSON Web Token is a standard used to create access tokens for an application.
+
+It works this way: the server generates a token that certifies the user identity, and sends it to the client.
+
+The client will send the token back to the server for every subsequent request, so the server knows the request comes from a particular identity.
+
+The token is stored in an HttpOnly cookie. The other methods are all prone to XSS attacks and as such they should be avoided. An HttpOnly cookie is not accessible from JavaScript, and is automatically sent to the origin server upon every request, so it perfectly suits the use case.
 
 ### Threaded programming
 
 #### When do you need to use threads in an application?
+You need use threads when you are in this situation:
+-	Asynchronous operations
+-	Operations that can be parallelized
+-	Continual running background operations
+
 #### What is a daemon thread?
+A daemon thread will run until it completes or until all User Threads have completed. 
+
+Daemon threads make excellent "behind the scenes" processes for things that must happen in the background but can be terminated when the application ends - garbage collection is a great example of a process that could be handled with a daemon thread. Once all User Threads complete, any daemon Threads that are still running are automatically halted and the application terminates.
+
 #### What is the difference between concurrent and parallel execution of code?
+Concurrency means that an application is making progress on more than one task at the same time (concurrently).
+
+Parallelism means that an application splits its tasks up into smaller subtasks which can be processed in parallel, for instance on multiple CPUs at the exact same time.
+
 #### What is the most important problem developers are faced when using threads?
+Deadlocks
+
 #### In what kind of situations can deadlocks occur?
+Mutual Exclusion : At least one unsharable resource - processes claim exclusive control of resources they need 
+
+Hold and Wait : Process holds one resource while waiting for another 
+
+No Preemption : Resources only released voluntarily - no interruption possible (i.e. cannot be forcefully withdrawn by another process) 
+
+Circular Wait : Circular chain of processes - each waiting for a resource held by another 
+
 #### What are possible ways to prevent deadlocks from occurring?
+Using the wait – die scheme method or wound – wait scheme.
+
 #### What does critical section or critical region mean in the context of concurrent programming?
+In concurrent programming, concurrent accesses to shared resources can lead to unexpected or erroneous behavior, so parts of the program where the shared resource is accessed need to be protected in ways that avoid the concurrent access. This protected section is the critical section or critical region.
