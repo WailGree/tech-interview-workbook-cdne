@@ -3,7 +3,7 @@
 ### ASP.NET Core, WCF
 
 #### What Is the difference between .NET Core and .NET Standard? How do them relate to “classic” .NET?
-.NET Core It is an open-source and cross-platform implementation of .NET. It shares many of its characteristics with .NET Framework but there are differences as well which we are going to discuss in a while.
+.NET Core It is an open-source and cross-platform implementation of .NET. It shares many of its characteristics with .NET Framework.
 
 All aspects of .NET Core are open-source including class libraries, runtime, compilers, languages as well as application frameworks. .NET Core also supports C#, Visual Basic and F#. It can run the application code with the same behavior on multiple architectures, including x64, x86, and ARM. It has a flexible deployment model in which it can be included in the application or installed side-by-side (user-wide or system-wide).
 
