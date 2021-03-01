@@ -302,7 +302,9 @@ Concurrency means that an application is making progress on more than one task a
 Parallelism means that an application splits its tasks up into smaller subtasks which can be processed in parallel, for instance on multiple CPUs at the exact same time.
 
 #### What is the most important problem developers are faced when using threads?
-Deadlocks
+Deadlocks.
+
+A deadlock is a state in which each member of a group waits for another member, including itself, to take action, such as sending a message or more commonly releasing a lock.
 
 #### In what kind of situations can deadlocks occur?
 Mutual Exclusion : At least one unsharable resource - processes claim exclusive control of resources they need 
